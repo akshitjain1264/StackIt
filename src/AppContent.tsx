@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ClerkProvider, useUser } from "@clerk/clerk-react";
-import { Header } from "./components/Header";
+import { useUser } from "@clerk/clerk-react";
 import { FilterBar } from "./components/FilterBar";
 import { QuestionCard } from "./components/QuestionCard";
 import { Pagination } from "./components/Pagination";
@@ -40,7 +39,17 @@ const AppContent: React.FC = () => {
 
         const data = await res.json();
         setQuestions(data);
-        if (questions.length == 0) {
+        
+      } catch (error) {
+        console.error("Error fetching questions:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchQuestions();
+
+    if (questions.length == 0) {
           setQuestions([
             {
               id: 1,
@@ -108,15 +117,9 @@ const AppContent: React.FC = () => {
             },
           ]);
         }
-      } catch (error) {
-        console.error("Error fetching questions:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchQuestions();
   }, []);
+
+  if(loading) return <div>Loading...</div>;
 
   const totalPages = 7;
 
@@ -135,7 +138,6 @@ const AppContent: React.FC = () => {
         darkMode ? "bg-gray-900 dark" : "bg-gray-50"
       }`}
     >
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       <div className="flex">
         <Sidebar

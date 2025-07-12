@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Moon, Sun, User, Plus, LogOut } from 'lucide-react';
+import { Search, Moon, Sun} from 'lucide-react';
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/clerk-react';
 import { NotificationDropdown } from './NotificationDropdown';
 

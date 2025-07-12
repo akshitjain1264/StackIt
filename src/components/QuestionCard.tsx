@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // ← import navigate hook
 import { motion } from 'framer-motion';
-import { MessageCircle, Eye, ArrowUp, Clock } from 'lucide-react';
+import { Eye, ArrowUp, Clock } from 'lucide-react';
 
 interface Question {
   id: number;

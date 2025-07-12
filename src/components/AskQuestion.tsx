@@ -1,20 +1,8 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  Bold,
-  Italic,
-  Underline,
-  List,
-  ListOrdered,
-  Link,
-  Image,
-  Code,
-  AlignLeft,
-  AlignCenter,
-  AlignRight,
-  X,
-  Plus,
+  X
 } from "lucide-react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -366,7 +354,7 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({
                   }`}
                 >
                   <div className="flex flex-wrap gap-2 mb-2">
-                    {tags.map((tag, index) => (
+                    {tags.map((tag) => (
                       <motion.span
                         key={tag}
                         initial={{ scale: 0, opacity: 0 }}
