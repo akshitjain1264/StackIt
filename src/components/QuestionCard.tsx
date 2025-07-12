@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // ← import navigate hook
 import { motion } from 'framer-motion';
 import { MessageCircle, Eye, ArrowUp, Clock } from 'lucide-react';
 
@@ -22,8 +23,15 @@ interface QuestionCardProps {
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({ question, darkMode, index }) => {
+  const navigate = useNavigate(); // ← initialize navigate
+
+  const handleClick = () => {
+    navigate(`/questions/${question.id}`);
+  };
+
   return (
     <motion.div
+      onClick={handleClick} // ← add click handler
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
@@ -103,7 +111,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, darkMode, 
       </div>
 
       <div className="flex flex-wrap gap-2 mt-4">
-        {question.tags.map((tag, tagIndex) => (
+        {question.tags.map((tag) => (
           <motion.span
             key={tag}
             whileHover={{ scale: 1.05 }}
