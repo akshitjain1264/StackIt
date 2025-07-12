@@ -171,7 +171,7 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({ darkMode, onClose }) =
                     transition={{ delay: 0.5 }}
                     className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-orange-400 to-orange-600 text-white font-medium"
                   >
-                    Watchful Cat
+                    Technical 
                   </motion.span>
                   <motion.span
                     initial={{ scale: 0, y: 10 }}
@@ -179,7 +179,7 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({ darkMode, onClose }) =
                     transition={{ delay: 0.6 }}
                     className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-purple-400 to-purple-600 text-white font-medium"
                   >
-                    jamingo
+                    Question
                   </motion.span>
                 </div>
               </div>
@@ -210,25 +210,6 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({ darkMode, onClose }) =
                   placeholder="Describe your problem in detail. Include what you've tried and what you expected to happen."
                 />
                 
-                {/* Sample content tags in editor area */}
-                <div className="absolute top-32 left-8 flex space-x-2 pointer-events-none">
-                  <motion.span
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 1 }}
-                    className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-cyan-400 to-cyan-600 text-white font-medium"
-                  >
-                    Wonderful Jay
-                  </motion.span>
-                  <motion.span
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 1.1 }}
-                    className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-blue-400 to-blue-600 text-white font-medium"
-                  >
-                    Accurate Capybara
-                  </motion.span>
-                </div>
               </div>
             </motion.div>
 
@@ -254,7 +235,7 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({ darkMode, onClose }) =
                     transition={{ delay: 0.7 }}
                     className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-purple-400 to-purple-600 text-white font-medium"
                   >
-                    Happy Mink
+                    Tags
                   </motion.span>
                 </div>
                 
@@ -333,17 +314,7 @@ export const AskQuestion: React.FC<AskQuestionProps> = ({ darkMode, onClose }) =
                   </motion.div>
                 )}
 
-                {/* Floating tag on the right */}
-                <div className="absolute -top-2 right-4">
-                  <motion.span
-                    initial={{ scale: 0, y: 10 }}
-                    animate={{ scale: 1, y: 0 }}
-                    transition={{ delay: 0.8 }}
-                    className="px-2 py-1 text-xs rounded-md bg-gradient-to-r from-purple-400 to-purple-600 text-white font-medium"
-                  >
-                    Rishabh Jain
-                  </motion.span>
-                </div>
+                
               </div>
             </motion.div>
 
